@@ -1,0 +1,72 @@
+{
+  "model_type": "LogisticRegression",
+  "best_hyperparameters": {
+    "C": 0.01,
+    "max_iter": 1000,
+    "class_weight": "balanced",
+    "random_state": 42,
+    "solver": "liblinear"
+  },
+  "tuning_history": [
+    {
+      "C": 0.01,
+      "train_f1": 0.9999391616475026,
+      "val_f1": 0.9998580553584102,
+      "val_acc": 0.9998580352072686,
+      "fit_time_seconds": 0.3663
+    },
+    {
+      "C": 0.1,
+      "train_f1": 0.9999391616475026,
+      "val_f1": 0.9998580553584102,
+      "val_acc": 0.9998580352072686,
+      "fit_time_seconds": 0.4358
+    },
+    {
+      "C": 1.0,
+      "train_f1": 0.9999391616475026,
+      "val_f1": 0.9998580553584102,
+      "val_acc": 0.9998580352072686,
+      "fit_time_seconds": 0.4691
+    },
+    {
+      "C": 10.0,
+      "train_f1": 0.9999391616475026,
+      "val_f1": 0.9998580553584102,
+      "val_acc": 0.9998580352072686,
+      "fit_time_seconds": 0.6466
+    },
+    {
+      "C": 100.0,
+      "train_f1": 0.9999391616475026,
+      "val_f1": 0.9998580553584102,
+      "val_acc": 0.9998580352072686,
+      "fit_time_seconds": 0.844
+    }
+  ],
+  "test_metrics": {
+    "accuracy": 0.9995741056218058,
+    "precision": 0.9997159897756319,
+    "recall": 0.9994321408290744,
+    "f1_score": 0.999574045151214,
+    "roc_auc": 0.9997663748044658,
+    "confusion_matrix": {
+      "tn": 3521,
+      "fp": 1,
+      "fn": 2,
+      "tp": 3520
+    },
+    "training_time_seconds": 0.352,
+    "prediction_time_seconds": 0.0148,
+    "latency_ms_per_sample": 0.0021
+  },
+  "dataset_metadata": {
+    "total_samples": 46959,
+    "train_samples": 32871,
+    "val_samples": 7044,
+    "test_samples": 7044,
+    "label_0_name": "Fake News (scraped)",
+    "label_1_name": "Synthetic (AI-generated)"
+  },
+  "dataset_limitations": "True.csv contains AI-generated synthetic articles rather than independently verified real-world news. High test metrics demonstrate successful classification between synthetic writing style and fake news corpus, not a production-ready real-world truth verifier."
+}

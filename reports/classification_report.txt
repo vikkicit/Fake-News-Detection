@@ -1,0 +1,23 @@
+=== LOGISTIC REGRESSION FAKE NEWS / SYNTHETIC CLASSIFIER ===
+
+Hyperparameters: {'C': 0.01, 'class_weight': 'balanced', 'dual': False, 'fit_intercept': True, 'intercept_scaling': 1, 'l1_ratio': None, 'max_iter': 1000, 'multi_class': 'auto', 'n_jobs': None, 'penalty': 'l2', 'random_state': 42, 'solver': 'liblinear', 'tol': 0.0001, 'verbose': 0, 'warm_start': False}
+
+                    precision    recall  f1-score   support
+
+Class 0: Fake News     0.9994    0.9997    0.9996      3522
+Class 1: Synthetic     0.9997    0.9994    0.9996      3522
+
+          accuracy                         0.9996      7044
+         macro avg     0.9996    0.9996    0.9996      7044
+      weighted avg     0.9996    0.9996    0.9996      7044
+
+
+Confusion Matrix:
+TN: 3521 | FP: 1
+FN: 2 | TP: 3520
+
+
+--- CRITICAL DATASET LIMITATION NOTICE ---
+The dataset consists of real scraped fake news (Fake.csv) and AI-generated synthetic news (True.csv).
+High test accuracy reflects distinguishing AI generated prose from sensational fake news,
+NOT generalizable real-world truth verification.
